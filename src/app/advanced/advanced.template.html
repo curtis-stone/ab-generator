@@ -1,0 +1,61 @@
+<body>
+<div class="title">
+  <h4 style="color: red;
+  font-style: italic;">
+    <strong>Advanced</strong></h4>
+    <h4>3 Sets of Each:</h4>
+</div>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <ng-template #blank1>Exercise 1</ng-template>
+    <div>
+      <p *ngIf="create; else blank1">
+        {{ exOne }}
+       </p>
+    </div>
+
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <ng-template #blank2>Exercise 2</ng-template>
+      <div>
+        <p *ngIf="create; else blank2">
+          {{ exTwo }}
+        </p>
+      </div>
+    </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <ng-template #blank3>Exercise 3</ng-template>
+    <div>
+      <p *ngIf="create; else blank3">
+      {{ exThree }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <ng-template #blank4>Exercise 4</ng-template>
+    <div>
+      <p *ngIf="create; else blank4">
+      {{ exFour }}
+      </p>
+    </div>
+  </div>
+
+  <div class="rest">
+    <p style="color: black;"><b>Rest Time:</b> 2 minutes between each set</p>
+  </div>
+
+  <div class="button">
+    <button class="btn btn-success" (click)="createWorkout()">Create Workout!</button>
+  </div>
+  </div>
+  </div>
+  </body>
